@@ -1,8 +1,10 @@
 #!/bin/sh
-filename='???'
-for i in `seq 3 6`;
+
+for i in $(ls);
 do
-	find ./ -maxdepth 1 -type f -name "$filename.*" 
-	find ./ -maxdepth 1 -type f -name "$filename" 
-	filename+='?'
+	a=$(echo $i | wc -m)
+	if [ $a -ge 3 ] && [ $a -le 6 ]
+	then
+		echo $i
+	fi
 done
