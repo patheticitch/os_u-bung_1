@@ -3,7 +3,7 @@
 for i in $(ls);
 do
 	a=$(echo $i | wc -m)
-	if [ $a -ge 3 ] && [ $a -le 6 ]
+	if [ $a -ge 3 ] && [ $a -lt 6 ]
 	then
 		echo $i
 	fi
